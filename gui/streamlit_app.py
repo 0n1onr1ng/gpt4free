@@ -23,7 +23,7 @@ def get_answer(question: str) -> str:
 
 # Set page configuration and add header
 st.set_page_config(
-    page_title="gpt4freeGUI",
+    page_title="星宝",
     initial_sidebar_state="expanded",
     page_icon="🧠",
     menu_items={
@@ -35,12 +35,12 @@ st.set_page_config(
 st.header('GPT4free GUI')
 
 # Add text area for user input and button to get answer
-question_text_area = st.text_area('🤖 Ask Any Question :', placeholder='Explain quantum computing in 50 words')
-if st.button('🧠 Think'):
+question_text_area = st.text_area('🤖 请在下方进行提问', placeholder='例：用50个字解释人工智能')
+if st.button('🧠 星宝思考中'):
     answer = get_answer(question_text_area)
     escaped = answer.encode('utf-8').decode('unicode-escape')
     # Display answer
-    st.caption("Answer :")
+    st.caption("星宝 :")
     st.markdown(escaped)
 
 # Hide Streamlit footer
